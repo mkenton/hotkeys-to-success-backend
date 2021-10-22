@@ -1,8 +1,5 @@
-class UsersController < ActionController
-  has_secure_password
-
-  # has_many :user_lessons
-  validates :username, uniqueness: true
+class UsersController < ApplicationController
+  
   skip_before_action :authorized, only: [:create]
 
   def profile
@@ -11,7 +8,9 @@ class UsersController < ActionController
 
   def create
     @user = User.create(user_params)
+    puts "---trying to create user----"
     if @user.valid?
+      puts "---valid user!!!---"
       @token = encode_token(user_id: @user.id)
       render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
     else
@@ -21,7 +20,10 @@ class UsersController < ActionController
 
   private
 
+
+
   def user_params
-    params.require(:user).permit(:username, :display_name, :password_digest)
+    params.require(:user).permit(:username, :password)
+    # byebug
   end
 end
