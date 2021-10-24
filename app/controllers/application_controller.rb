@@ -14,7 +14,7 @@ class ApplicationController < ActionController::API
       if auth_header
         token = auth_header.split(' ')[1]
         begin
-          JWT.decode(token, "put your password here", true, algorithm: 'HS256')
+          JWT.decode(token, "put password here", true, algorithm: 'HS256')
         rescue JWT::DecodeError
           nil
         end
@@ -25,7 +25,6 @@ class ApplicationController < ActionController::API
       if decoded_token
         user_id = decoded_token[0]['user_id']
         @user = User.find_by(id: user_id)
-        # TODO: test error, potentially switch to find(params: id: user_id) to explicitly communicate AcitveReocrd error
       end
     end
 

@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2021_10_21_051907) do
   enable_extension "plpgsql"
 
   create_table "lesson_events", force: :cascade do |t|
-    t.boolean "completed"
+    t.string "status"
     t.bigint "lesson_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
