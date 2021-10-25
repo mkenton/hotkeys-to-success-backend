@@ -4,6 +4,8 @@ class User < ApplicationRecord
     has_many :lesson_events
 
     validates :username, uniqueness: { case_sensitive: false}
+    validates :username, presence: true
+    validates :password, presence: true
 
     def password_verified(password)
         verified = authenticate(password)
