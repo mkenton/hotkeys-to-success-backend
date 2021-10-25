@@ -46,6 +46,6 @@ class LessonEventsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def lesson_event_params
-      params.require(:lesson_event).permit(:completed, :lesson_id, :user_id)
+      params.require(:lesson_event).permit(:status, :lesson_id, :user_id)
     end
 end
