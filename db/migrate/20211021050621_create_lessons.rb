@@ -3,6 +3,8 @@ class CreateLessons < ActiveRecord::Migration[6.1]
     create_table :lessons do |t|
       t.string :title
       t.string :category
+      t.string :shortcut
+      t.string :description
 
       t.timestamps
     end
