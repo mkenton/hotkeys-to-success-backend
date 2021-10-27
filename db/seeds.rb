@@ -6,12 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #
-
+puts "reset users and lessons"
+User.destroy_all
+Lesson.destroy_all
 puts "crating seeds 🌱"
 puts
 puts "Create user"
 
-User.create(username: "firstuser", password: "firstpass")
+User.create(username: "admin", password: "admin", role: "admin")
 
 Lesson.create(title: "Move line up", category: "Editing", shortcut:"option+up", description: "")
 Lesson.create(title: "Move line down", category: "Editing", shortcut:"option+down", description: "")
