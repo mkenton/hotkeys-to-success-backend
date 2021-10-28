@@ -16,14 +16,16 @@ puts "Create user"
 User.create(username: "admin", display_name: "admin", password: "admin", role: "admin")
 User.create(username: "JohnSmith", display_name: "John-o", password: "pass", role: "student" )
 
-Lesson.create(title: "Move line up", category: "Editing", shortcut:"option+up", description: "Move selected line up")
-Lesson.create(title: "Move line down", category: "Editing", shortcut:"option+down", description: "Move selected line down")
-Lesson.create(title: "Copy line up", category: "Editing", shortcut:"option+shift+up", description: "Copy selected line up")
-Lesson.create(title: "Copy line down", category: "Editing", shortcut:"option+shift+down", description: "Copy selected line down")
-Lesson.create(title: "Delete all characters", category: "CLI", shortcut:"control+u", description: "Delete all characters from the command line")
-Lesson.create(title: "Move cursor to beginning", category: "CLI", shortcut:"control+a", description: "Move the cursor to beginning of the command line")
-Lesson.create(title: "Move cursor to end", category: "CLI", shortcut:"control+e", description: "Move the cursor to end of the command line")
+Lesson.create(title: "Move line up", category: "Editing", shortcut:"option+up", description: "Moves selected line(s) up")
+Lesson.create(title: "Move line down", category: "Editing", shortcut:"option+down", description: "Moves selected line(s) down")
+Lesson.create(title: "Copy line up", category: "Editing", shortcut:"option+shift+up", description: "Copies selected line(s) up")
+Lesson.create(title: "Copy line down", category: "Editing", shortcut:"option+shift+down", description: "Copies selected line(s) down")
+Lesson.create(title: "Comment line", category: "Editing", shortcut:"ctrl+/", description: "Comments out selected line(s)")
+Lesson.create(title: "Move cursor to beginning", category: "CLI", shortcut:"control+a", description: "Moves the cursor to beginning of the command line")
+Lesson.create(title: "Move cursor to end", category: "CLI", shortcut:"control+e", description: "Moves the cursor to end of the command line")
+Lesson.create(title: "Cut all characters before cursor", category: "CLI", shortcut:"control+u", description: "Deletes all characters from the beginning of the line up to the cursor position, saves content to clipboard")
+Lesson.create(title: "Cut all characters after cursor", category: "CLI", shortcut:"control+k", description: "Deletes all characters from the cursor to the end of the line, saves content to clipboard")
+Lesson.create(title: "Paste cut characters", category: "CLI", shortcut:"control+y", description: "Pastes content saved to clipboard")
 
 
-Lesson.create(title: "search", category: "Search", shortcut:"command+f", description: "")
 puts "🌳--Finished seeding!-- 🌳"
