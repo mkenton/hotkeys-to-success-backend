@@ -20,7 +20,7 @@ Lesson.create(title: "Move line up", category: "Editing", shortcut:"option+up", 
 Lesson.create(title: "Move line down", category: "Editing", shortcut:"option+down", description: "Moves selected line(s) down")
 Lesson.create(title: "Copy line up", category: "Editing", shortcut:"option+shift+up", description: "Copies selected line(s) up")
 Lesson.create(title: "Copy line down", category: "Editing", shortcut:"option+shift+down", description: "Copies selected line(s) down")
-Lesson.create(title: "Comment line", category: "Editing", shortcut:"control+/", description: "Comments out selected line(s)")
+Lesson.create(title: "Comment line", category: "Editing", shortcut:"command+/", description: "Comments out selected line(s)")
 Lesson.create(title: "Move cursor to beginning", category: "CLI", shortcut:"control+a", description: "Moves the cursor to beginning of the command line")
 Lesson.create(title: "Move cursor to end", category: "CLI", shortcut:"control+e", description: "Moves the cursor to end of the command line")
 Lesson.create(title: "Cut all characters before cursor", category: "CLI", shortcut:"control+u", description: "Deletes all characters from the beginning of the line up to the cursor position, saves content to clipboard")
